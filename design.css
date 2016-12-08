@@ -59,6 +59,7 @@ h2 {
     font-weight: 300;
     margin: 100px -30px 50px 0;
     padding: 0 0 5px 0;
+    counter-reset: myCourses myThumbnails;
 }
 
 h2:first-of-type {
@@ -76,7 +77,7 @@ h3 {
 }
 
 h3::before {
-    content: counter(myCourses) '. ';
+    content: counter(myCourses);
     width: 80px;
     position: absolute;
     top: 25px;
