@@ -94,6 +94,7 @@ figure {
     float: right;
     line-height: 1.15em;
     margin: 12px 0 25px 40px;
+    counter-increment: myThumbnails;
 }
 
 figure img {
@@ -105,4 +106,11 @@ figure figcaption {
     display: block;
     margin: 8px 0;
     width: 165px;
+}
+
+figure figcaption::before {
+    content: 'Course ' counter(myThumbnails);
+    font-style: italic;
+    display: block;
+
 }
